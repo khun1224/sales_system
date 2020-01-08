@@ -1,0 +1,139 @@
+
+<!doctype html>
+<html  lang="en">
+
+    <head>
+        <!-- meta data -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+        <!--font-family-->
+		<!-- <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&amp;subset=devanagari,latin-ext" rel="stylesheet">-->
+        
+        <!-- title of site -->
+        <title>注册</title>
+
+        <!-- For favicon png -->
+		<link rel="shortcut icon" type="image/icon" href="/static/bootstrap/logo/favicon.png"/>
+       
+        <!--font-awesome.min.css-->
+        <link rel="stylesheet" href="/static/bootstrap/css/font-awesome.min.css">
+		
+		<!--animate.css-->
+        <link rel="stylesheet" href="/static/bootstrap/css/animate.css">
+		
+        <!--bootstrap.min.css-->
+        <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
+		
+		<!-- bootsnav -->
+		<link rel="stylesheet" href="/static/bootstrap/css/bootsnav.css" >
+        
+        <!--style.css-->
+        <link rel="stylesheet" href="/static/bootstrap/css/style.css">
+        
+        <!--responsive.css-->
+        <link rel="stylesheet" href="/static/bootstrap/css/responsive.css">
+
+    </head>
+	
+	<body>
+
+		<!-- signin end -->
+		<form class="signin signup" action="." method="post">
+            {% csrf_token %}
+			<div class="container">
+
+				<div class="sign-content">
+					<h2>注册</h2>
+
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="signin-form">
+								<form action="signin.html">
+
+									<div class="form-group">
+										<label for="signin_form">用户名</label>
+									    <input type="text" class="form-control" id="signin_form"
+                                               placeholder="请输入用户名"
+                                               name="username">
+									</div><!--/.form-group -->
+                                    {{ form.username.errors }}
+									<div class="form-group">
+										<label for="signin_form">设置密码</label>
+									    <input type="password" class="form-control" id="signin_form"
+                                               placeholder="设置密码"
+                                               name="password">
+									</div><!--/.form-group -->
+                                    {{ form.password.errors }}
+									<div class="form-group">
+										<label for="signin_form">确认密码</label>
+									    <input type="password" class="form-control" id="signin_form"
+                                               placeholder="确认密码"
+                                               name="password_repeat">
+									</div><!--/.form-group -->
+                                    {{ form.password_repeat.errors }}
+                                    {{ form.non_field_errors }}
+								</form><!--/form -->
+							</div><!--/.signin-form -->
+						</div><!--/.col -->
+					</div><!--/.row -->
+
+
+
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="signin-footer">
+
+                                <input class="btn signin_btn" type="submit" value="注册">
+								<p>
+									已有账号？
+									<a href="{% url 'xadmin:index' %}">登陆</a>
+								</p>
+							</div><!--/.signin-footer -->
+						</div><!--/.col-->
+					</div><!--/.row -->
+
+				</div><!--/.sign-content -->
+
+			</div><!--/.container -->
+
+		</form><!--/.signin -->
+		
+		<!-- signin end -->
+
+		<!--footer copyright start -->
+		<footer class="footer-copyright">
+			<div id="scroll-Top">
+				<i class="fa fa-angle-double-up return-to-top" id="scroll-top" data-toggle="tooltip" data-placement="top" title="" data-original-title="Back to Top" aria-hidden="true"></i>
+			</div><!--/.scroll-Top-->
+
+		</footer><!--/.hm-footer-copyright-->
+		<!--footer copyright  end -->
+
+
+		 <!-- Include all js compiled plugins (below), or include individual files as needed -->
+
+		<script src="/static/bootstrap/js/jquery.js"></script>
+        
+        <!--modernizr.min.js-->
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>-->
+		
+		<!--bootstrap.min.js-->
+        <script src="/static/bootstrap/js/bootstrap.min.js"></script>
+		
+		<!-- bootsnav js -->
+		<script src="/static/bootstrap/js/bootsnav.js"></script>
+		
+		<!-- jquery.sticky.js -->
+		<script src="/static/bootstrap/js/jquery.sticky.js"></script>
+		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script> -->
+		
+        
+        <!--Custom JS-->
+        <script src="/static/bootstrap/js/custom.js"></script>
+
+    </body>
+	
+</html>
